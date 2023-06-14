@@ -9,7 +9,7 @@ case $OSTYPE in
     FILE_URI=$(echo $HTML | grep -o -E "/Media.*?"$(date "+%y")".*?\.zip" | head -n 1 | sed 's/^/https:\/\/cpr.dk\//')
   ;;
   linux*)
-    FILE_URI=$(echo $HTML | grep -o -P "/Media.*?"$(date "+%y")".*?\.zip" head -n 1 | sed 's/^/https:\/\/cpr.dk\//')
+    FILE_URI=$(echo $HTML | grep -o -P "/Media.*?"$(date "+%y")".*?\.zip" | head -n 1 | sed 's/^/https:\/\/cpr.dk\//')
   ;;
 esac
 
